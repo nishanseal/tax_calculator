@@ -1,0 +1,39 @@
+# Federal Tax Calculator – Project Rules & Tech Stack
+
+## Core Principles
+- Extract and reimplement only the tax logic and test cases from the IRS Direct File repo (not the full app).
+- UX: Single continuous page (not step-by-step wizards), with auto-save and a collapsible summary sidebar.
+- Layout should mimic the IRS Form 1040 for the current tax year (2024), with updates each year.
+- Users fill out the form, see a live summary, and download a completed 1040 to mail in.
+- Store user data (filing status, name, dependents, W-2 info, etc.) in Supabase.
+- Open source, with a focus on clarity, maintainability, and security.
+
+## Tech Stack
+- **Frontend:** React (TypeScript), Material UI (or similar modern UI library)
+- **State Management:** React Context or Zustand
+- **Backend/DB:** Supabase (Postgres, Auth, Storage)
+- **Tax Logic:** Ported from Scala (IRS Direct File) to TypeScript modules
+- **Testing:** Jest (unit tests, especially for tax logic)
+- **Forms:** React Hook Form
+- **PDF Generation:** pdf-lib or react-pdf
+- **Deployment:** Vercel/Netlify (frontend), Supabase (backend)
+
+## Security
+- Store sensitive data securely in Supabase (use RLS, never expose secrets)
+- Use HTTPS everywhere
+- Sanitize all user inputs
+- Follow best practices for authentication and authorization
+
+## MVP Scope
+- Only 2024 Form 1040 (standard deduction, no itemized deductions)
+- Core user info: name, address, filing status, dependents, W-2 employer info
+- Live summary sidebar: refund/due, name, address, filing status, links
+- Downloadable, filled 1040 PDF
+- Auto-save progress
+- No state returns, no itemized deductions, no advanced schedules (for MVP)
+
+---
+
+_This file should be updated as the project evolves._
+alwaysApply: true
+---
