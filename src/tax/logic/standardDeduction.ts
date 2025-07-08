@@ -66,7 +66,6 @@ function calculateDependentStandardDeduction(taxpayerInfo: TaxpayerInfo): number
   // 2. Earned income + $400 (but not more than the regular standard deduction)
   
   const minimumDependentDeduction = 1300; // 2024 amount
-  const regularStandardDeduction = STANDARD_DEDUCTION_2024[taxpayerInfo.filingStatus];
   
   // Note: For this MVP, we're assuming earned income equals wages from W-2s
   // In a full implementation, this would need to be calculated from all income sources

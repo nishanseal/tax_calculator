@@ -18,7 +18,7 @@ export function calculateChildTaxCredit(
   
   // AGI phase-out thresholds for 2024
   const phaseOutThreshold = getChildTaxCreditPhaseOutThreshold(filingStatus);
-  const phaseOutRate = 0.05; // $50 for every $1,000 over threshold
+  // Phase-out rate: $50 for every $1,000 over threshold
   
   let totalCredit = 0;
   
